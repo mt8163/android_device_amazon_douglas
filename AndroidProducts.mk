@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_douglas.mk
+    $(LOCAL_DIR)/lineage_douglas.mk
