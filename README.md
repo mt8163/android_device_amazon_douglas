@@ -2,9 +2,13 @@
 
 The Amazon Fire HD8 2017 (codenamed "douglas") is a low-range tablet from amazon announced in 2017.
 
+## Device Picture
+![Amazon Fire HD8 2017](https://media.wired.com/photos/5a2b2d4ea850e23a4736f3be/master/w_582,c_limit/amazonfire-TA.jpg "Amazon Fire HD8 2017")
+
+
 Basic   | Spec Sheet
 -------:|:--------------------------------------------------
-CPU     | Quad (4x1.3 GHz Cortex-A35)
+CPU     | 1.3 GHz quad-core ARM Cortex-A53
 CHIPSET | Mediatek MT8163
 GPU     | Mali 720
 Memory  | 1,5GB RAM
@@ -12,31 +16,37 @@ Android | 5.1 (FireOS 5.X)
 Storage | 16/32 GB
 MicroSD | yes
 MicroSD | yes
-Battery | ? mAh
+Battery | 4750  mAh
 Display | 8"
-Front Camera  | 2 MP
+Front Camera  | 0.3 MP
 Rear Camera  | 2 MP
 
-![Amazon Fire HD8 2017](https://media.wired.com/photos/5a2b2d4ea850e23a4736f3be/master/w_582,c_limit/amazonfire-TA.jpg "Amazon Fire HD8 2017")
 
-This branch is for building CyanogenMod 12.1/LineageOS 12.1
 
-# Download the sources
-```
-$ repo init -u https://github.com/cm12-amami/android.git -b cm-12.1 --groups=all,-notdefault,-darwin,-x86,-mips
-$ cd .repo
-$ git clone https://github.com/cm12-amami/local_manifests 
-$ cd local_manifests 
-$ git checkout cm-12.1 
-$ cd ../.. 
-$ repo sync --no-tags
-```
+## Copyright
 
-# Build
 ```
-$ git clone https://github.com/CM12-1-Douglas/android_device_amazon_douglas.git -b cm-12.1 device/amazon/douglas
-$ chmod a+x device/amazon/douglas/setup-sources.sh && ./device/amazon/douglas/setup-sources.sh
-$ source ./build/envsetup.sh
-$ lunch cm_douglas-userdebug (or "-eng" for testing)
-$ mka bacon -j8 (Specify your cores for the build) (If you run out memory, try with export LANG=C)
+#
+# Copyright (C) 2020 The LineageOS Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
 ```
+###### Maintainers
+-Kaijones23 [xda](https://forum.xda-developers.com/member.php?u=9605864)|[github](https://github.com/488315)
+
+###### Contributors
+-R0rtiz [xda](https://forum.xda-developers.com/member.php?u=8978978)|[github](https://github.com/R0rt1z2)
+
+
+> [*For Build Instructions*](https://github.com/mt8163/android_vendor_amazon_mt8163/blob/lineage-16.0/README.md)
