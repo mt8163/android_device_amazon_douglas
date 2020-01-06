@@ -3,6 +3,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE := android.hardware.light@2.0-impl-mediatek
 LOCAL_PROPRIETARY_MODULE := true
+LOCAL_MODULE_OWNER := mtk
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_SRC_FILES := \
     Light.cpp \
@@ -26,6 +27,7 @@ LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE := android.hardware.light@2.0-service-mediatek
 LOCAL_INIT_RC := android.hardware.light@2.0-service-mediatek.rc
 LOCAL_PROPRIETARY_MODULE := true
+LOCAL_MODULE_OWNER := mtk
 LOCAL_SRC_FILES := \
     service.cpp \
 
