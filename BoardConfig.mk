@@ -27,9 +27,11 @@ TARGET_2ND_CPU_VARIANT := cortex-a15
 TARGET_CPU_SMP := true
 
 # Kernel
-TARGET_PREBUILT_KERNEL := $(DEVICE_BASE)/prebuilt/kernel
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00000000 --ramdisk_offset 0x03400000 --second_offset 0x00e80000 --tags_offset 0x07f80000
+TARGET_KERNEL_SOURCE := kernel/amazon/douglas
+TARGET_KERNEL_CONFIG := douglas_defconfig
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x40080000
@@ -134,5 +136,3 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone2/temp
 DEVICE_RESOLUTION := 800x1280
 
-# Other stuff/MISC
-$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
